@@ -1,0 +1,99 @@
+/**
+ * Theme Made by nubl!
+ */
+
+/* IMPORT CSS */
+@import url("https://clearvision.github.io/ClearVision-v7/main.css");
+
+/* Comic Sans Font Overrides */
+:root {
+  --font-display: "Comic Sans MS", "Comic Sans", "Chalkboard SE", "Comic Neue", sans-serif !important;
+  --font-primary: "Comic Sans MS", "Comic Sans", "Chalkboard SE", "Comic Neue", sans-serif !important;
+  --font-code: "Comic Sans MS", "Comic Sans", "Chalkboard SE", "Comic Neue", sans-serif !important;
+  --font-headline: "Comic Sans MS", "Comic Sans", "Chalkboard SE", "Comic Neue", sans-serif !important;
+}
+
+/* Global Font Force */
+* {
+  font-family: "Comic Sans MS", "Comic Sans", "Chalkboard SE", "Comic Neue", sans-serif !important;
+}
+
+/* ─── QUICK-CHANGE ASSIGNMENT ZONE ───────────────────────────────────── */
+:root {
+  /* 1. Paste your background image link here */
+  --background-image: url("https://files.catbox.moe/9s5fpe.png") !important;
+
+  /* 2. Adjust background darkness here (0.0 = completely bright, 1.0 = pure black) */
+  --bg-darkness: 0.45;
+
+  /* 3. CHOOSE YOUR PRESET: Just delete the /* from the front of the color you want! 
+        Make sure ONLY ONE line is active at a time. */
+
+  /* --accent-main: #ff3b30; --accent-hover: #c61f16; --accent-glow: rgba(255, 59, 48, 0.5); */ /* <--- RED */
+  /* --accent-main: #007aff; --accent-hover: #0056b3; --accent-glow: rgba(0, 122, 255, 0.5); */ /* <--- BLUE */
+  /* --accent-main: #af52de; --accent-hover: #7b2cb1; --accent-glow: rgba(175, 82, 222, 0.5); */ /* <--- PURPLE */
+  /* --accent-main: #34c759; --accent-hover: #208b3a; --accent-glow: rgba(52, 199, 89, 0.5); */ /* <--- GREEN */
+  /* --accent-main: #00f5d4; --accent-hover: #00bbf9; --accent-glow: rgba(0, 245, 212, 0.5); */ /* <--- CYAN */
+  /* --accent-main: #ff9500; --accent-hover: #cc7600; --accent-glow: rgba(255, 149, 0, 0.5); */ /* <--- ORANGE */
+  /* --accent-main: #70e000; --accent-hover: #52a600; --accent-glow: rgba(112, 224, 0, 0.5); */ /* <--- LIME */
+   --accent-main: #e6396e; --accent-hover: #b22450; --accent-glow: rgba(230, 57, 110, 0.5);   /* <--- PINK */
+}
+/* ────────────────────────────────────────────────────────────────────── */
+
+
+/* CORE VARIABLE ROUTING */
+:root {
+  --main-color: var(--accent-main) !important;    
+  --hover-color: var(--accent-hover) !important;  
+  --success-color: var(--accent-hover) !important;  
+  --danger-color: #ff3366 !important;  
+
+  --background-position: center !important;
+  --background-size: cover !important;
+  --background-repeat: no-repeat !important;
+  --background-attachment: fixed !important;
+  --background-shading-percent: 15% !important;
+
+  /* Dynamically overlays a dark tint layer based on your choice above */
+  --background-shading: rgba(0, 0, 0, var(--bg-darkness)) !important;
+  --card-shading: rgba(0, 0, 0, calc(var(--bg-darkness) + 0.1)) !important;
+  --popout-shading: rgba(20, 10, 15, 0.75) !important;
+  --modal-shading: rgba(15, 5, 10, 0.85) !important;
+  --input-shading: rgba(0, 0, 0, 0.3) !important;
+
+  --background-filter: drop-shadow(0 0 20px var(--accent-glow)) 
+                        drop-shadow(0 0 40px rgba(0, 0, 0, 0.4)) !important;
+}
+
+/* DARK THEME CLEANUP */
+.theme-dark {
+  --background-shading: rgba(0, 0, 0, var(--bg-darkness)) !important;
+  --card-shading: rgba(0, 0, 0, calc(var(--bg-darkness) + 0.1)) !important;
+  --popout-shading: rgba(0, 0, 0, 0.5) !important;
+  --modal-shading: rgba(0, 0, 0, 0.6) !important;
+  --input-shading: rgba(0, 0, 0, 0.2) !important;
+  --normal-text: #ffffff !important;
+  --muted-text: #e0c5cd !important;
+}
+
+/* CHANNEL GLOW */
+[class*="modeSelected"] {
+  box-shadow: inset 0 0 12px var(--accent-glow) !important;
+  border-radius: 8px !important;
+}
+
+/* UNREAD BAR */
+[class*="unread"] {
+  box-shadow: inset 3px 0 0 var(--accent-main) !important;
+}
+
+/* VISIBILITY HELPER & TEXT SHADOW */
+* {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9) !important;
+}
+
+/* OBFUSCATED WATERMARK ENGINE */
+html body div[class*="app"] [class*="wordmark"],html body div[class*="app"] div[class*="leading_"]:not([class*="voice_"]):not([class*="channel_"]):not([class*="wrapper_"]):not([class*="member_"]):not([class*="content_"]):not([class*="container_"]){font-size:0px!important;display:inline-flex!important;align-items:center!important;z-index:99999!important;}
+html body div[class*="app"] [class*="wordmark"] svg,html body div[class*="app"] div[class*="leading_"]:not([class*="voice_"]):not([class*="channel_"]):not([class*="wrapper_"]):not([class*="member_"]):not([class*="content_"]):not([class*="container_"]) svg{display:none!important;visibility:hidden!important;width:0px!important;height:0px!important;}
+html body div[class*="app"] [class*="wordmark"]::before,html body div[class*="app"] div[class*="leading_"]:not([class*="voice_"]):not([class*="channel_"]):not([class*="wrapper_"]):not([class*="member_"]):not([class*="content_"]):not([class*="container_"])::before{content:"\6E\75\62\6C"!important;font-size:16px!important;color:var(--main-color)!important;font-weight:bold!important;letter-spacing:1px!important;font-family:var(--font-display,"Comic Sans MS",sans-serif)!important;text-shadow:0 0 8px var(--accent-glow)!important;margin-right:2px!important;position:relative!important;top:10px!important;visibility:visible!important;}
+html body div[class*="app"] [class*="wordmark"]::after,html body div[class*="app"] div[class*="leading_"]:not([class*="voice_"]):not([class*="channel_"]):not([class*="wrapper_"]):not([class*="member_"]):not([class*="content_"]):not([class*="container_"])::after{content:"\76\37\2e\30\2e\31"!important;font-size:10px!important;color:var(--muted-text)!important;font-weight:normal!important;font-family:var(--font-display,"Comic Sans MS",sans-serif)!important;text-shadow:none!important;opacity:0.6!important;position:relative!important;top:8px!important;visibility:visible!important;}
